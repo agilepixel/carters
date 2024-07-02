@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.footer {
+  background: linear-gradient(
+    90deg,
+    #041e42 0%,
+    #041e42 50%,
+    #f0f0f0 50%,
+    #f0f0f0 100%
+  );
+}

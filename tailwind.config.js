@@ -16,9 +16,18 @@ module.exports = {
       x2lg: '1920px',
       pageMaxWidth: '1440px',
     },
+    maxWidth: {
+      desktop: '1170px',
+    },
     extend: {
       fontFamily: {
         heading: 'var(--font-heading-family)',
+      },
+      colors: {
+        primary: '#FFD700',
+        secondary: '#041E42',
+        tertiary: '#F0F0F0',
+        content: '#454545',
       },
     },
   },
