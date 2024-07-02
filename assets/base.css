@@ -102,12 +102,6 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
     padding: 0 5rem;
   }
 
-  .header.page-width,
-  .utility-bar__grid.page-width {
-    padding-left: 3.2rem;
-    padding-right: 3.2rem;
-  }
-
   .page-width--narrow {
     padding: 0 9rem;
   }
@@ -122,11 +116,6 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 @media screen and (min-width: 990px) {
-  .header:not(.drawer-menu).page-width {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
   .page-width--narrow {
     max-width: 72.6rem;
     padding: 0;
@@ -482,7 +471,7 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-family: inherit;
 }
 
@@ -692,7 +681,8 @@ summary::-webkit-details-marker {
 *:focus-visible {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
+  box-shadow:
+    0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
@@ -700,7 +690,8 @@ summary::-webkit-details-marker {
 .focused {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
+  box-shadow:
+    0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
@@ -733,14 +724,16 @@ summary::-webkit-details-marker {
 .focus-offset:focus-visible {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 1rem;
-  box-shadow: 0 0 0 1rem rgb(var(--color-background)),
+  box-shadow:
+    0 0 0 1rem rgb(var(--color-background)),
     0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
 }
 
 .focus-offset.focused {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 1rem;
-  box-shadow: 0 0 0 1rem rgb(var(--color-background)),
+  box-shadow:
+    0 0 0 1rem rgb(var(--color-background)),
     0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
 }
 
@@ -1249,7 +1242,8 @@ button.shopify-payment-button__button--unbranded {
   left: var(--buttons-border-width);
   z-index: 1;
   border-radius: var(--buttons-radius);
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+  box-shadow:
+    0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
       rgba(var(--color-button-text), var(--border-opacity)),
     0 0 0 var(--buttons-border-width)
       rgba(var(--color-button), var(--alpha-button-background));
@@ -1261,7 +1255,8 @@ button.shopify-payment-button__button--unbranded {
 .customer button:hover::after,
 .shopify-payment-button__button--unbranded:hover::after {
   --border-offset: 1.3px;
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+  box-shadow:
+    0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
       rgba(var(--color-button-text), var(--border-opacity)),
     0 0 0 calc(var(--buttons-border-width) + 1px)
       rgba(var(--color-button), var(--alpha-button-background));
@@ -1279,13 +1274,16 @@ button.shopify-payment-button__button--unbranded {
 .shopify-payment-button__button--unbranded:focus,
 .shopify-payment-button [role='button']:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
+  box-shadow:
+    0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0 0.5rem rgba(var(--color-foreground), 0.5),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .button:focus:not(:focus-visible):not(.focused),
-.shopify-payment-button__button--unbranded:focus:not(:focus-visible):not(.focused),
+.shopify-payment-button__button--unbranded:focus:not(:focus-visible):not(
+    .focused
+  ),
 .shopify-payment-button
   [role='button']:focus:not(:focus-visible):not(.focused) {
   box-shadow: inherit;
@@ -1517,7 +1515,8 @@ details[open] > .share-button__fallback {
 .share-button__fallback .field__input:-webkit-autofill {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.1rem;
-  box-shadow: 0 0 0 0.1rem rgb(var(--color-background)),
+  box-shadow:
+    0 0 0 0.1rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
@@ -1725,7 +1724,8 @@ details[open] > .share-button__fallback {
   margin-bottom: 0;
   pointer-events: none;
   position: absolute;
-  transition: top var(--duration-short) ease,
+  transition:
+    top var(--duration-short) ease,
     font-size var(--duration-short) ease;
   color: rgba(var(--color-foreground), 0.75);
   letter-spacing: 0.1rem;
@@ -2075,16 +2075,16 @@ product-info .loading__spinner:not(.hidden) ~ *,
   position: absolute;
   background-color: rgb(var(--color-button));
   color: rgb(var(--color-button-text));
-  height: 1.7rem;
-  width: 1.7rem;
+  height: 1rem;
+  width: 1rem;
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.9rem;
-  bottom: 0.8rem;
-  left: 2.2rem;
-  line-height: calc(1 + 0.1 / var(--font-body-scale));
+  font-size: 0.4rem;
+  top: -0.3rem;
+  left: -0.5rem;
+  line-height: 1;
 }
 
 /* utility-bar */
@@ -2353,6 +2353,19 @@ product-info .loading__spinner:not(.hidden) ~ *,
   grid-template-areas: 'left-icons heading icons';
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
+  position: fixed;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96%;
+  background: #fff;
+  border-radius: 32px;
+  padding: 6px 18px;
+}
+@media screen and (min-width: 749px) {
+  .header {
+    padding: 6px 56px;
+  }
 }
 
 @media screen and (max-width: 749px) {
@@ -2410,7 +2423,6 @@ product-info .loading__spinner:not(.hidden) ~ *,
 
   .header:not(.header--middle-left, .header--middle-center)
     .header__inline-menu {
-    margin-top: 1.05rem;
   }
 }
 
@@ -2435,7 +2447,6 @@ product-info .loading__spinner:not(.hidden) ~ *,
 
 .header__heading-link {
   display: inline-block;
-  padding: 0.75rem;
   text-decoration: none;
   word-break: break-word;
 }
@@ -2506,7 +2517,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
   display: flex;
   grid-area: icons;
   justify-self: end;
-  padding-right: 0.8rem;
+  gap: 1rem;
 }
 
 .header__icons .shopify-app-block {
@@ -2520,6 +2531,9 @@ product-info .loading__spinner:not(.hidden) ~ *,
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  font-size: 0.8rem;
 }
 
 .header__icon {
@@ -2540,25 +2554,19 @@ product-info .loading__spinner:not(.hidden) ~ *,
 }
 
 .header__icon .icon {
-  height: 2rem;
-  width: 2rem;
+  height: 1rem;
+  width: 1rem;
   fill: none;
-  vertical-align: middle;
-}
-
-.header__icon,
-.header__icon--cart .icon {
-  height: 4.4rem;
-  width: 4.4rem;
-  padding: 0;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
 }
 
 .header__icon--cart {
   position: relative;
-  margin-right: -1.2rem;
 }
 
-.header__icon--menu[aria-expanded='true']::before {
+/* .header__icon--menu[aria-expanded='true']::before {
   content: '';
   top: 100%;
   left: 0;
@@ -2569,7 +2577,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
   display: block;
   position: absolute;
   background: rgba(var(--color-foreground), 0.5);
-}
+} */
 
 .header__icon--account shop-user-avatar {
   --shop-avatar-size: 2.8rem;
@@ -2590,7 +2598,6 @@ menu-drawer + .header__search {
 }
 
 .header--top-center header-drawer {
-  grid-area: left-icons;
 }
 
 .header:not(.header--has-menu) * > .header__search {
@@ -2702,10 +2709,11 @@ details[open] .modal-overlay::after {
 /* Header menu drawer */
 .header__icon--menu .icon {
   display: block;
-  position: absolute;
   opacity: 1;
   transform: scale(1);
-  transition: transform 150ms ease, opacity 150ms ease;
+  transition:
+    transform 150ms ease,
+    opacity 150ms ease;
 }
 
 details:not([open]) > .header__icon--menu .icon-close,
@@ -2713,6 +2721,7 @@ details[open] > .header__icon--menu .icon-hamburger {
   visibility: hidden;
   opacity: 0;
   transform: scale(0.8);
+  display: none;
 }
 
 .js details[open]:not(.menu-opening) > .header__icon--menu .icon-close {
@@ -2745,7 +2754,6 @@ details[open] > .header__submenu {
 
 /* Header menu */
 .header__inline-menu {
-  margin-left: -1.2rem;
   grid-area: navigation;
   display: none;
 }
@@ -2778,7 +2786,6 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item {
-  padding: 1.2rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
 }
@@ -2820,7 +2827,8 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__submenu {
-  transition: opacity var(--duration-default) ease,
+  transition:
+    opacity var(--duration-default) ease,
     transform var(--duration-default) ease;
 }
 
@@ -3331,7 +3339,8 @@ details-disclosure > details {
   .animate--hover-3d-lift .customer button,
   .animate--hover-3d-lift .shopify-payment-button__button,
   .animate--hover-3d-lift .deferred-media .deferred-media__poster-button {
-    transition: transform var(--duration-long) ease,
+    transition:
+      transform var(--duration-long) ease,
       box-shadow var(--duration-long) ease;
     transform-origin: center;
   }
@@ -3343,10 +3352,12 @@ details-disclosure > details {
   .animate--hover-3d-lift .customer button:not([disabled]):hover,
   .animate--hover-3d-lift .shopify-payment-button__button:hover,
   .animate--hover-3d-lift .deferred-media:hover .deferred-media__poster-button {
-    transition: transform var(--duration-extended) ease,
+    transition:
+      transform var(--duration-extended) ease,
       box-shadow var(--duration-long) ease; /* Slow the card transition speed while hover is active. */
     transform: rotate(1deg);
-    box-shadow: -1rem -1rem 1rem -1rem rgba(0, 0, 0, 0.05),
+    box-shadow:
+      -1rem -1rem 1rem -1rem rgba(0, 0, 0, 0.05),
       1rem 1rem 1rem -1rem rgba(0, 0, 0, 0.05),
       0 0 0.5rem 0 rgba(255, 255, 255, 0),
       0 2rem 3.5rem -2rem rgba(0, 0, 0, 0.5);
@@ -3382,7 +3393,8 @@ details-disclosure > details {
     .card--shape.card--standard:not(.card--text)
     .card__inner {
     box-shadow: none;
-    transition: transform var(--duration-long) ease,
+    transition:
+      transform var(--duration-long) ease,
       filter var(--duration-long) ease;
   }
 
@@ -3390,7 +3402,8 @@ details-disclosure > details {
     .card-wrapper:hover
     .card--shape.card--standard:not(.card--text)
     .card__inner {
-    transition: transform calc(2 * var(--duration-extended)) ease,
+    transition:
+      transform calc(2 * var(--duration-extended)) ease,
       filter var(--duration-long) ease; /* Slow the card transition speed while hover is active. */
     filter: drop-shadow(0rem 2rem 2rem rgba(0, 0, 0, 0.15))
       drop-shadow(0rem 1rem 1rem rgba(0, 0, 0, 0.15));
@@ -3436,7 +3449,8 @@ details-disclosure > details {
     left: 0;
     opacity: 0;
     pointer-events: none;
-    transition: background-position calc(2 * var(--duration-extended)) ease,
+    transition:
+      background-position calc(2 * var(--duration-extended)) ease,
       opacity var(--duration-default) ease;
     mix-blend-mode: overlay;
     background-size: 400% 100%;
@@ -3456,7 +3470,9 @@ details-disclosure > details {
     .card--standard
     .card__media:after {
     opacity: 0.2;
-    transition: background-position 6s ease, opacity var(--duration-long) ease;
+    transition:
+      background-position 6s ease,
+      opacity var(--duration-long) ease;
     background-position: left;
     z-index: 2;
   }
@@ -3517,7 +3533,8 @@ details-disclosure > details {
   .animate--hover-vertical-lift
     .shopify-payment-button__button:not([disabled]):hover:after {
     --border-offset: 0.3px; /* Default is 1.3px as defined above in this file. This removes 1px to prevent the border from growing on buttons when this effect is on.  */
-    box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+    box-shadow:
+      0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
         rgba(var(--color-button-text), var(--border-opacity)),
       0 0 0 var(--buttons-border-width)
         rgba(var(--color-button), var(--alpha-button-background));

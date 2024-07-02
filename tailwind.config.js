@@ -18,6 +18,7 @@ module.exports = {
     },
     maxWidth: {
       desktop: '1170px',
+      design: '1366px',
     },
     extend: {
       fontFamily: {

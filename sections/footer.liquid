@@ -44,16 +44,28 @@
   -%}
 
 
-  <div class="twcss-w-11/12 twcss-max-w-desktop twcss-mx-auto">
+  <div class="twcss-max-w-design twcss-mx-auto">
     <div class="twcss-grid lg:twcss-grid-cols-3">
-      <div class="twcss-bg-secondary twcss-text-white twcss-py-6 twcss-px-8 lg:twcss-py-12 lg:twcss-px-16 twcss-flex twcss-flex-col twcss-gap-5 twcss-justify-between">
-        <img src="{{ section.settings.footer_logo }}" alt="" width="" height="" />
-        <div class="twcss-text-base">
+      <div class="twcss-bg-secondary twcss-text-white twcss-py-6 twcss-px-8 lg:twcss-py-12 lg:twcss-px-16 twcss-flex twcss-flex-col twcss-gap-11 twcss-justify-between">
+        {%- assign logo_alt = section.settings.footer_logo.alt | default: shop.name | escape -%}
+        {%- assign logo_height = 1 -%}
+        {% capture sizes %}(max-width: {{ 128 | times: 2 }}px) 50vw, {{ 128 }}px{% endcapture %}
+        {% capture widths %}{{ 128 }}, {{ 128 | times: 1.5 | round }}, {{ 128 | times: 2 }}{% endcapture %}
+        {{ section.settings.footer_logo | image_url: width: 600 | image_tag:
+          class: 'header__heading-logo motion-reduce',
+          widths: widths,
+          height: logo_height,
+          width: 128,
+          alt: logo_alt,
+          sizes: sizes,
+          preload: true
+        }}
+        <div class="twcss-text-base twcss-max-w-[220px] twcss-text-balance">
           <p>Neiley Works, 72 New Mill Road, Honley, Holmfirth, West Yorkshire, HD9 6QQ</p>
-          <p>Phone: <a href="tel:+4401234567890" target="_blank">0123 456 7890</a></p>
+          <p>Phone: <a href="tel:+4401234567890" target="_blank" class="twcss-underline">0123 456 7890</a></p>
         </div>
         <div class="twcss-text-xs">
-          <ul class="twcss-flex twcss-items-center twcss-gap-2">
+          <ul class="twcss-flex twcss-items-center twcss-gap-2 twcss-mb-2">
             <li>
               <a href="/terms-conditions">Terms + Conditions</a>
             </li>
@@ -69,7 +81,7 @@
       <div class="twcss-bg-primary twcss-text-secondary twcss-py-6 twcss-px-8 lg:twcss-py-12 lg:twcss-px-16 twcss-flex twcss-flex-col twcss-gap-5 twcss-justify-between">
         <h3 class="twcss-text-base twcss-uppercase twcss-font-medium twcss-tracking-wider">Download a Brochure</h3>
 
-        <div class="twcss-text-2xl">
+        <div class="twcss-text-2xl twcss-text-balance">
           <p>The Original Hand Tool Manufacturer, Download the Carters 2024 Collection.</p>
         </div>
 
@@ -81,7 +93,7 @@
       <div class="twcss-bg-tertiary twcss-text-secondary twcss-py-6 twcss-px-8 lg:twcss-py-12 lg:twcss-px-16 twcss-flex twcss-flex-col twcss-gap-5 twcss-justify-between">
         <h3 class="twcss-text-base twcss-uppercase twcss-font-medium twcss-tracking-wider">Sign up</h3>
 
-        <div class="twcss-text-2xl twcss-leading-normal ">
+        <div class="twcss-text-2xl twcss-leading-normal twcss-text-balance">
           <p>Want to order easily online? Sign up to a Carters trade account now.</p>
         </div>
 
