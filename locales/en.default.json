@@ -308,7 +308,8 @@
       }
     },
     "footer": {
-      "payment": "Payment methods"
+      "payment": "Payment methods",
+      "footer_logo": "Footer logo"
     },
     "featured_blog": {
       "view_all": "View all",
