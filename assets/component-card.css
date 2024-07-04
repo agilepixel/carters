@@ -1,8 +1,15 @@
 .card-wrapper {
-  color: inherit;
+  color: var(--custom-color);
   height: 100%;
   position: relative;
   text-decoration: none;
+  background: var(--gradient-background);
+  text-align: center;
+  padding: 0.8rem 1.5rem;
+}
+.card-wrapper div,
+.card-wrapper h3 {
+  color: var(--custom-color);
 }
 
 .card {
@@ -93,7 +100,7 @@
 }
 
 .card-information {
-  text-align: var(--text-alignment);
+  text-align: center;
 }
 
 .card__media,
@@ -139,7 +146,8 @@
 
 .card__information {
   grid-row-start: 2;
-  padding: 1.3rem 1rem;
+  padding: 0.5rem 0;
+  text-align: center;
 }
 
 .card:not(.ratio) > .card__content {
@@ -315,6 +323,8 @@
 .card__heading {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 1rem;
+  text-transform: none;
 }
 
 .card__heading:last-child {
@@ -373,13 +383,15 @@
 }
 
 .card__heading a:focus:after {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
+  box-shadow:
+    0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
 }
 
 .card__heading a:focus-visible:after {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
+  box-shadow:
+    0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
 }
@@ -516,7 +528,7 @@
 .card-information
   > *:not(.visually-hidden:first-child)
   + *:not(.rating):not(.card__information-volume-pricing-note) {
-  margin-top: 0.7rem;
+  margin-top: 0.1rem;
 }
 
 .card-information .caption {

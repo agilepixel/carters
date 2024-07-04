@@ -78,6 +78,17 @@
           data-url="{{ product.url }}"
           class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
         >
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Ranges</a>
+            </li>
+            <li>
+              <a href="#">Shocksafe</a>
+            </li>
+          </ul>
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
           {%- for block in section.blocks -%}
@@ -536,7 +547,7 @@
                           -%}
                           <div
                             id="Slider-{{ block.id }}"
-                            class="contains-card contains-card--product complementary-slider grid grid--1-col slider slider--everywhere"
+                            class="grid contains-card contains-card--product complementary-slider grid--1-col slider slider--everywhere"
                             role="list"
                             {% if number_of_slides > 1 %}
                               aria-label="{{ 'general.slider.name' | t }}"
@@ -742,6 +753,40 @@
         ]
       }
     </script>
+
+    <div class="">
+      <ul class="">
+        <li>
+          <button data-destination="description">Description</button>
+      </li>
+        <li>
+          <button data-destination="technical-spec">Techinical Spec</button>
+      </li>
+
+      </ul>
+    </div>
+
+    <div class="twcss-flex twcss-flex-col twcss-gap-6 lg:twcss-gap-9" id="description">
+      <div class="twcss-grid lg:twcss-grid-cols-12 twcss-gap-4">
+        <h3 class="twcss-col-span-3">{{ product.metafields.custom.description_tab_title_1 | metafield_tag}}</h3>
+        <div class="twcss-col-span-6">
+        {{ product.metafields.custom.description_tab_content_1 | metafield_tag}}
+        </div>
+      </div>
+      <div class="twcss-grid lg:twcss-grid-cols-12 twcss-gap-4">
+        <h3 class="twcss-col-span-3">{{ product.metafields.custom.description_tab_title_2 | metafield_tag}}</h3>
+        <div class="twcss-col-span-6">
+          {{ product.metafields.custom.description_tab_content_2 | metafield_tag}}
+        </div>
+      </div>
+    </div>
+    <div class="" id="technical-spec">
+      <div class="twcss-grid lg:twcss-grid-cols-12 twcss-gap-4">
+        <div class="lg:twcss-col-span-9">
+          {{ product.metafields.custom.technical_spec_tab | metafield_tag}}
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
