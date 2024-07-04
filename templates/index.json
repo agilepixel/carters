@@ -9,27 +9,79 @@
 */
 {
   "sections": {
-    "multicolumn": {
-      "type": "multicolumn",
+    "featured_product_V64YeT": {
+      "type": "featured-product",
+      "blocks": {
+        "text_cKctLp": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_Pk4VaA": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_iXeFC7": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_Dmacr8": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_GNPrnV": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons_BAi8Yi": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_c4mFde": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_cKctLp",
+        "title_Pk4VaA",
+        "price_iXeFC7",
+        "variant_picker_Dmacr8",
+        "quantity_selector_GNPrnV",
+        "buy_buttons_BAi8Yi",
+        "share_c4mFde"
+      ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "product": "",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "multicolumn"
+    "featured_product_V64YeT"
   ]
 }
