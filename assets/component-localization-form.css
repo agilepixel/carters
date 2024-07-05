@@ -215,7 +215,8 @@
 }
 
 .country-filter__search-icon {
-  transition: opacity var(--duration-short) ease,
+  transition:
+    opacity var(--duration-short) ease,
     visibility var(--duration-short) ease;
   opacity: 1;
   visibility: visible;
@@ -312,7 +313,7 @@
   padding: 0.9rem 1.5rem;
   text-decoration: none;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
   word-break: break-word;
 }
 
