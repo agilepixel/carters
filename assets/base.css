@@ -3653,10 +3653,6 @@ main {
   display: none;
 }
 
-.carter-checkout .shopify-payment-button__button {
-  padding: 0;
-  margin: 0;
-}
 .carter-checkout .product-form__input {
   max-width: 65%;
 }
