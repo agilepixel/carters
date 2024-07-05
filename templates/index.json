@@ -12,13 +12,6 @@
     "featured_product_V64YeT": {
       "type": "featured-product",
       "blocks": {
-        "text_cKctLp": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title_Pk4VaA": {
           "type": "title",
           "settings": {
@@ -32,6 +25,7 @@
         },
         "variant_picker_Dmacr8": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "swatch_shape": "circle"
@@ -51,7 +45,6 @@
         }
       },
       "block_order": [
-        "text_cKctLp",
         "title_Pk4VaA",
         "price_iXeFC7",
         "variant_picker_Dmacr8",
