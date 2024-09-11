@@ -1,3 +1,5 @@
+shopify theme dev --store=83a3e6-72.myshopify.com
+
 Brought to you and maintained by [Trellis Commerce](https://trellis.co/) - A full-service eCommerce agency based in Boston, MA
 
 Latest merged code from [Dawn v14.0.0](https://github.com/Shopify/dawn/releases/tag/v14.0.0)

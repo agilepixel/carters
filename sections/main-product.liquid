@@ -119,13 +119,18 @@
             {% endcase %}
           {% endfor %}
 
-          <div class='twcss-flex twcss-gap-2 carter-checkout lg:twcss-flex-nowrap twcss-flex-wrap twcss-items-center twcss-max-w-[370px]'>
+          <div class='carter-checkout twcss-max-w-[370px]'>
             {%- for block in section.blocks -%}
               {%- case block.type -%}
                 {%- when '@app' -%}
                   {% render block %}
                 {%- when 'price' -%}
-                  <div id='price-{{ section.id }}' role='status' {{ block.shopify_attributes }}>
+                  <div
+                    class='cart-col-4'
+                    id='price-{{ section.id }}'
+                    role='status'
+                    {{ block.shopify_attributes }}
+                  >
                     {%- render 'price',
                       product: product,
                       use_variant: true,
@@ -138,7 +143,7 @@
                       <span>{{ 'products.product.volume_pricing.note' | t }}</span>
                     </div>
                   {%- endif -%}
-                  <div class='product__tax caption rte'>
+                  <div class='hidden product__tax caption rte'>
                     {%- if cart.taxes_included -%}
                       {{ 'products.product.include_taxes' | t }}
                     {%- endif -%}
@@ -146,7 +151,7 @@
                       {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
                     {%- endif -%}
                   </div>
-                  <div {{ block.shopify_attributes }}>
+                  <div {{ block.shopify_attributes }} class='hidden'>
                     {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                     {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
                       <input type='hidden' name='id' value='{{ product.selected_or_first_available_variant.id }}'>
