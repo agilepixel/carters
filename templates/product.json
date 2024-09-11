@@ -1,19 +1,18 @@
-/*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "none"
+          }
+        },
         "title": {
           "type": "title",
+          "disabled": true,
           "settings": {
           }
         },
@@ -25,14 +24,6 @@
         "price": {
           "type": "price",
           "settings": {
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
           }
         },
         "quantity_selector": {
@@ -49,10 +40,10 @@
         }
       },
       "block_order": [
+        "variant_picker",
         "title",
         "description",
         "price",
-        "variant_picker",
         "quantity_selector",
         "buy_buttons"
       ],
