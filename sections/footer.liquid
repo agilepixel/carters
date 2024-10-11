@@ -27,7 +27,7 @@
   }
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }}">
+<footer class='footer color-{{ section.settings.color_scheme }}'>
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -43,64 +43,72 @@
     endif
   -%}
 
-
-  <div class="twcss-max-w-design twcss-mx-auto">
-    <div class="twcss-grid lg:twcss-grid-cols-3">
-      <div class="twcss-bg-secondary twcss-text-white twcss-py-6 twcss-px-8 lg:twcss-py-12 lg:twcss-px-16 twcss-flex twcss-flex-col twcss-gap-11 twcss-justify-between">
+  <div class='twcss-max-w-design twcss-mx-auto'>
+    <div class='twcss-grid lg:twcss-grid-cols-3'>
+      <div class='twcss-bg-secondary twcss-text-white twcss-py-6 twcss-px-8 lg:twcss-py-12 lg:twcss-px-16 twcss-flex twcss-flex-col twcss-gap-11 twcss-justify-between'>
         {%- assign logo_alt = section.settings.footer_logo.alt | default: shop.name | escape -%}
         {%- assign logo_height = 1 -%}
         {% capture sizes %}(max-width: {{ 128 | times: 2 }}px) 50vw, {{ 128 }}px{% endcapture %}
         {% capture widths %}{{ 128 }}, {{ 128 | times: 1.5 | round }}, {{ 128 | times: 2 }}{% endcapture %}
-        {{ section.settings.footer_logo | image_url: width: 600 | image_tag:
-          class: 'header__heading-logo motion-reduce',
-          widths: widths,
-          height: logo_height,
-          width: 128,
-          alt: logo_alt,
-          sizes: sizes,
-          preload: true
+        {{
+          section.settings.footer_logo
+          | image_url: width: 600
+          | image_tag:
+            class: 'header__heading-logo motion-reduce',
+            widths: widths,
+            height: logo_height,
+            width: 128,
+            alt: logo_alt,
+            sizes: sizes,
+            preload: true
         }}
-        <div class="twcss-text-base twcss-max-w-[220px] twcss-text-balance">
+        <div class='twcss-text-base twcss-max-w-[220px] twcss-text-balance'>
           <p>Neiley Works, 72 New Mill Road, Honley, Holmfirth, West Yorkshire, HD9 6QQ</p>
-          <p>Phone: <a href="tel:+4401234567890" target="_blank" class="twcss-underline">0123 456 7890</a></p>
+          <p>Phone: <a href='tel:+4401234567890' target='_blank' class='twcss-underline'>0123 456 7890</a></p>
         </div>
-        <div class="twcss-text-xs">
-          <ul class="twcss-flex twcss-items-center twcss-gap-2 twcss-mb-2">
+        <div class='twcss-text-xs'>
+          <ul class='twcss-flex twcss-items-center twcss-gap-2 twcss-mb-2'>
             <li>
-              <a href="/terms-conditions">Terms + Conditions</a>
+              <a href='/terms-conditions'>Terms + Conditions</a>
             </li>
             <li>|</li>
             <li>
-              <a href="/privacy-policy">Privacy Policy</a>
+              <a href='/privacy-policy'>Privacy Policy</a>
             </li>
           </ul>
-          <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All Rights Reserved</p>
+          <p>
+            &copy; {{ 'now' | date: '%Y' }}
+            {{ shop.name }}. All Rights Reserved
+          </p>
         </div>
       </div>
 
-      <div class="twcss-bg-primary twcss-text-secondary twcss-py-6 twcss-px-8 lg:twcss-py-12 lg:twcss-px-16 twcss-flex twcss-flex-col twcss-gap-5 twcss-justify-between">
-        <h3 class="twcss-text-base twcss-uppercase twcss-font-medium twcss-tracking-wider">Download a Brochure</h3>
+      {% comment %}
+        <div class="twcss-bg-primary twcss-text-secondary twcss-py-6 twcss-px-8 lg:twcss-py-12 lg:twcss-px-16 twcss-flex twcss-flex-col twcss-gap-5 twcss-justify-between">
+          <h3 class="twcss-text-base twcss-uppercase twcss-font-medium twcss-tracking-wider">Download a Brochure</h3>
 
-        <div class="twcss-text-2xl twcss-text-balance">
-          <p>The Original Hand Tool Manufacturer, Download the Carters 2024 Collection.</p>
+          <div class="twcss-text-2xl twcss-text-balance">
+            <p>The Original Hand Tool Manufacturer, Download the Carters 2024 Collection.</p>
+          </div>
+
+          <div class="">
+            <a href="#" target="_blank" class="twcss-underline twcss-text-xl twcss-italic">Download Now</a>
+          </div>
         </div>
+      {% endcomment %}
+      {% comment %}
+        <div class="twcss-bg-tertiary twcss-text-secondary twcss-py-6 twcss-px-8 lg:twcss-py-12 lg:twcss-px-16 twcss-flex twcss-flex-col twcss-gap-5 twcss-justify-between">
+          <h3 class="twcss-text-base twcss-uppercase twcss-font-medium twcss-tracking-wider">Sign up</h3>
 
-        <div class="">
-          <a href="#" target="_blank" class="twcss-underline twcss-text-xl twcss-italic">Download Now</a>
+          <div class="twcss-text-2xl twcss-leading-normal twcss-text-balance">
+            <p>Want to order easily online? Sign up to a Carters trade account now.</p>
+          </div>
+
+          <div class="">
+            <a href="#" target="_blank" class="twcss-underline twcss-text-xl twcss-italic">Request an account</a>
+          </div>
         </div>
-      </div>
-
-      <div class="twcss-bg-tertiary twcss-text-secondary twcss-py-6 twcss-px-8 lg:twcss-py-12 lg:twcss-px-16 twcss-flex twcss-flex-col twcss-gap-5 twcss-justify-between">
-        <h3 class="twcss-text-base twcss-uppercase twcss-font-medium twcss-tracking-wider">Sign up</h3>
-
-        <div class="twcss-text-2xl twcss-leading-normal twcss-text-balance">
-          <p>Want to order easily online? Sign up to a Carters trade account now.</p>
-        </div>
-
-        <div class="">
-          <a href="#" target="_blank" class="twcss-underline twcss-text-xl twcss-italic">Request an account</a>
-        </div>
-      </div>
+      {% endcomment %}
     </div>
   </div>
 </footer>
