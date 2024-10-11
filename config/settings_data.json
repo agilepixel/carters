@@ -1,17 +1,17 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/logo.svg",
+    "logo": "shopify://shop_images/logo.svg",
     "logo_width": 70,
-    "favicon": "shopify:\/\/shop_images\/logo.svg",
+    "favicon": "shopify://shop_images/logo.svg",
     "type_header_font": "futura_n4",
     "heading_scale": 100,
     "type_body_font": "futura_n4",
@@ -105,15 +105,15 @@
     "badge_corner_radius": 40,
     "sale_badge_color_scheme": "scheme-1",
     "sold_out_badge_color_scheme": "scheme-2",
-    "brand_image": "shopify:\/\/shop_images\/logo.svg",
+    "brand_image": "shopify://shop_images/logo.svg",
     "brand_image_width": 75,
-    "social_facebook_link": "https:\/\/www.facebook.com\/Carterstools\/",
-    "social_instagram_link": "https:\/\/www.instagram.com\/carterstools\/",
+    "social_facebook_link": "https://www.facebook.com/Carterstools/",
+    "social_instagram_link": "https://www.instagram.com/carterstools/",
     "social_youtube_link": "",
     "social_tiktok_link": "",
     "social_twitter_link": "",
     "social_snapchat_link": "",
-    "social_pinterest_link": "https:\/\/www.pinterest.co.uk\/richardcarterltd0217\/",
+    "social_pinterest_link": "https://www.pinterest.co.uk/richardcarterltd0217/",
     "social_tumblr_link": "",
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
@@ -122,10 +122,10 @@
     "currency_code_enabled": false,
     "cart_type": "notification",
     "show_vendor": false,
-    "show_cart_note": false,
+    "show_cart_note": true,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-4f6223af-e7d7-4e6e-98f2-684c756c33ad",
-    "checkout_logo_image": "shopify:\/\/shop_images\/logo.svg",
+    "checkout_logo_image": "shopify://shop_images/logo.svg",
     "checkout_logo_position": "center",
     "checkout_logo_size": "small",
     "checkout_body_background_color": "#f0f0f0",
