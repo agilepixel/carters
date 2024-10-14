@@ -5,3 +5,31 @@
 .footer {
   background-color: #041e42;
 }
+
+.product-form__buttons [data-shopify='payment-button'] {
+  display: none;
+}
+
+.product-form__buttons .product-form__submit {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.8rem 2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none;
+  color: #fff;
+  transition: box-shadow var(--duration-short) ease;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+.product-form__buttons .product-form__submit:hover {
+  background: rgba(var(--color-button), var(--alpha-button-background));
+  color: #000;
+}

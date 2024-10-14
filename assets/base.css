@@ -124,8 +124,8 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   }
 
   .page-width-desktop {
-    max-width: var(--page-width);
-    padding: 0 5rem;
+    /* max-width: var(--page-width);
+    padding: 0 5rem; */
   }
 }
 

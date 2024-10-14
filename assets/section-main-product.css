@@ -184,7 +184,7 @@
 
 .product-form__submit {
   margin-bottom: 1rem;
-  display: none;
+  /*   display: none; */
 }
 
 .product-form__submit[aria-disabled='true']
