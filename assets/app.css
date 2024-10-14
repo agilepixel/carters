@@ -44,10 +44,9 @@ html,
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-  tab-size: 4;
+     tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -90,7 +89,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /*
@@ -136,8 +135,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-feature-settings: normal;
   /* 2 */
@@ -380,8 +378,7 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -401,7 +398,7 @@ Set the default cursor for buttons.
 */
 
 button,
-[role='button'] {
+[role="button"] {
   cursor: pointer;
 }
 
@@ -449,9 +446,7 @@ video {
   display: none;
 }
 
-*,
-::before,
-::after {
+*, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -564,6 +559,15 @@ video {
   margin-right: auto;
 }
 
+.twcss-my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.twcss-mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .twcss-flex {
   display: flex;
 }
@@ -572,40 +576,60 @@ video {
   display: grid;
 }
 
-.twcss-w-11\/12 {
-  width: 91.666667%;
+.twcss-max-w-\[220px\] {
+  max-width: 220px;
 }
 
-.twcss-max-w-desktop {
-  max-width: 1170px;
+.twcss-max-w-design {
+  max-width: 1366px;
 }
 
 .twcss-flex-col {
   flex-direction: column;
 }
 
-.twcss-items-center {
-  align-items: center;
+.twcss-flex-wrap {
+  flex-wrap: wrap;
 }
 
-.twcss-justify-center {
-  justify-content: center;
+.twcss-items-center {
+  align-items: center;
 }
 
 .twcss-justify-between {
   justify-content: space-between;
 }
 
-.twcss-gap-5 {
-  gap: 1.25rem;
+.twcss-gap-1 {
+  gap: 0.25rem;
 }
 
-.twcss-gap-3 {
-  gap: 0.75rem;
+.twcss-gap-11 {
+  gap: 2.75rem;
 }
 
 .twcss-gap-2 {
   gap: 0.5rem;
+}
+
+.twcss-gap-4 {
+  gap: 1rem;
+}
+
+.twcss-gap-5 {
+  gap: 1.25rem;
+}
+
+.twcss-gap-6 {
+  gap: 1.5rem;
+}
+
+.twcss-gap-px {
+  gap: 1px;
+}
+
+.twcss-text-balance {
+  text-wrap: balance;
 }
 
 .twcss-bg-primary {
@@ -641,6 +665,11 @@ video {
 .twcss-text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.twcss-text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .twcss-text-xl {
@@ -687,19 +716,108 @@ video {
   text-decoration-line: underline;
 }
 
+.twcss-opacity-35 {
+  opacity: 0.35;
+}
+
 .footer {
-  background: linear-gradient(
-    90deg,
-    #041e42 0%,
-    #041e42 50%,
-    #f0f0f0 50%,
-    #f0f0f0 100%
-  );
+  background-color: #041e42;
+}
+
+.product-form__buttons [data-shopify='payment-button'] {
+  display: none;
+}
+
+.product-form__buttons .product-form__submit {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.8rem 2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none;
+  color: #fff;
+  transition: box-shadow var(--duration-short) ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+.product-form__buttons .product-form__submit:hover {
+  background: rgba(var(--color-button), var(--alpha-button-background));
+  color: #000;
+}
+
+.cart__note .field__input{
+  border:1px solid #000 !important;
+}
+
+.after\:twcss-block::after {
+  content: var(--tw-content);
+  display: block;
+}
+
+.after\:twcss-content-\[\"\|\"\]::after {
+  --tw-content: "|";
+  content: var(--tw-content);
+}
+
+.after\:twcss-content-\[\'\/\'\]::after {
+  --tw-content: '/';
+  content: var(--tw-content);
+}
+
+.last\:after\:twcss-hidden:last-child::after {
+  content: var(--tw-content);
+  display: none;
 }
 
 @media (min-width: 990px) {
+  .lg\:twcss-col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .lg\:twcss-col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+
+  .lg\:twcss-col-span-9 {
+    grid-column: span 9 / span 9;
+  }
+
+  .lg\:twcss-my-16 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .lg\:twcss-grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
   .lg\:twcss-grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:twcss-flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:twcss-gap-2 {
+    gap: 0.5rem;
+  }
+
+  .lg\:twcss-gap-2\.5 {
+    gap: 0.625rem;
+  }
+
+  .lg\:twcss-gap-9 {
+    gap: 2.25rem;
   }
 
   .lg\:twcss-px-16 {
