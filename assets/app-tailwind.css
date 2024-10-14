@@ -33,3 +33,7 @@
   background: rgba(var(--color-button), var(--alpha-button-background));
   color: #000;
 }
+
+.cart__note .field__input {
+  border: 1px solid #000 !important;
+}

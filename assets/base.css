@@ -3679,3 +3679,29 @@ main {
 .carter-checkout .shopify-payment-button__more-options {
   display: none;
 }
+
+.cart__note .field__input,
+#Cart-note {
+  border: 1px solid #000 !important;
+  background: #fff !important;
+  border-radius: 1rem !important;
+}
+
+.blog__content {
+  margin-bottom: 4rem;
+}
+.blog__content * + * {
+  margin-top: 1rem !important;
+}
+.blog__content a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.sectionIntro {
+  margin-bottom: 2rem;
+}
+
+.page-width > .rte {
+  margin-bottom: 4rem;
+}
