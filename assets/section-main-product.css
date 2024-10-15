@@ -1187,8 +1187,9 @@ a.product__text {
 
 @media screen and (min-width: 750px) {
   .product:not(.product--small) .thumbnail__badge {
-    height: 3rem;
-    width: 3rem;
+    height: 4.5rem;
+    width: 4rem;
+    pointer-events: none;
   }
 
   .product:not(.product--small) .thumbnail__badge .icon {

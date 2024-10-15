@@ -3697,6 +3697,10 @@ main {
   color: #000;
   text-decoration: underline;
 }
+.rte a:hover,
+.blog__content a:hover {
+  color: rgba(var(--color-foreground), 1);
+}
 
 .sectionIntro {
   margin-bottom: 2rem;
